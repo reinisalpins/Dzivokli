@@ -22,7 +22,6 @@
    <h1>Reinis Alpiņš &copy; 2022</h1>
 </footer>
 
-<script src="script.js"></script>
 <body>
     
 </body>

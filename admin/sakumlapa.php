@@ -10,26 +10,56 @@
 </head>
 <body>
 
-    <section class="navigacija">
     
-    <div class="sidebar">
-    <i class="fas fa-user"></i>
-    <p>Sveicināti: Reinis</p>
-    <hr>
-  <a href="#home" class="active">Sākumlapa</a>
-  <a href="#news">Sludinājumi</a>
-  <a href="#news">Rezervācijas</a>
-  <a href="#contact">Lietotāji</a>
+<div class="wrapper">
+    <nav id="sidebar">
+      <div class="sidebar-header">
+        <h3> <i class="fas fa-home"></i></h3>
+        <h3>Sveicināti: Reinis</h3>
+        <hr>
+      </div>
+      <ul>
+        <li>
+          <a href=""> Sākums </a>
+        </li>
+        <li>
+          <a href=""> Lietotāji </a>
+        </li>
+        <li>
+          <a href=""> Sludinājumi </a>
+        </li>
+        <li>
+          <a href=""> Rezervācijas </a>
+        </li>
+      </ul>
 
+      <div class="logout"><a href="index.php"><i class="fas fa-sign-out-alt"></i></a></div>
+    </nav>
+    <div class="content">
+      <div class="container">
+        <h1>Kopsavilkums</h1>
+        <div class="box-container">
+            <div class="box">
+                <div class="box-info">
+                    Jaunākie Lietotāji
+                </div>
+                asd
+            </div>
 
-  <div class="logout">
-     <a href="index.php"><i class="fas fa-sign-out-alt"></i></a> 
-      
+            <div class="box">
+                <div class="box-info">
+                    Jaunākie Lietotāji
+                </div>
+                asd
+            </div>
+            
+        </div>
+        
+      </div>
+    </main>
   </div>
 
-  
-</div>
-    </section>
+    
 
 </body>
 </html>
