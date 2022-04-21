@@ -18,4 +18,7 @@ require "header.php";
                 <input type="password" class="input" required />
 
                 <button class="sign-in-button">Reģistrēties</button>
+                <div class="login-links-container">
+                <a href="login.php" class="login-link">Ielogoties</a>
+            </div>
             </form>
