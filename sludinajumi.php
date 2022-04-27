@@ -7,63 +7,63 @@ $page = "sludinajumi";
     <div class="box-container">
         <div class="sludinajums">
             <img src="images/dzivoklis.jpg" alt="">
-            <p>Pilsēta: Liepāja</p>
-            <p>Rajons: Centrs</p>
-            <p>Cena: 50$/dienā</p>
+            <p><b>Pilsēta:</b> Liepāja</p>
+            <p><b>Iela:</b> Lielā</p>
+            <p><b>Cena:</b> 50$/dienā</p>
             <div class="poga">
                 <button>Vairāk info</button>
             </div>
         </div>
         <div class="sludinajums">
         <img src="images/dzivoklis.jpg" alt="">
-        <p>Pilsēta: Liepāja</p>
-            <p>Rajons: Centrs</p>
-            <p>Cena: 50$/dienā</p>
+        <p><b>Pilsēta:</b> Liepāja</p>
+            <p><b>Iela:</b> Tirgus</p>
+            <p><b>Cena:</b> 50$/dienā</p>
             <div class="poga">
                 <button>Vairāk info</button>
             </div>
         </div>
         <div class="sludinajums">
         <img src="images/dzivoklis.jpg" alt="">
-             <p>Pilsēta: Liepāja</p>
-            <p>Rajons: Centrs</p>
-            <p>Cena: 50$/dienā</p>
+             <p><b>Pilsēta:</b> Liepāja</p>
+            <p><b>Iela:</b> Stacijas</p>
+            <p><b>Cena:</b> 50$/dienā</p>
             <div class="poga">
                 <button>Vairāk info</button>
             </div>
         </div>
         <div class="sludinajums">
         <img src="images/dzivoklis.jpg" alt="">
-            <p>Pilsēta: Liepāja</p>
-            <p>Rajons: Centrs</p>
-            <p>Cena: 50$/dienā</p>
+            <p><b>Pilsēta:</b> Liepāja</p>
+            <p><b>Iela:</b> Alejas</p>
+            <p><b>Cena:</b> 50$/dienā</p>
             <div class="poga">
                 <button>Vairāk info</button>
             </div>
         </div>
         <div class="sludinajums">
         <img src="images/dzivoklis.jpg" alt="">
-        <p>Pilsēta: Liepāja</p>
-            <p>Rajons: Centrs</p>
-            <p>Cena: 50$/dienā</p>
+        <p><b>Pilsēta:</b> Liepāja</p>
+            <p><b>Iela:</b> Stacijas</p>
+            <p><b>Cena:</b> 50$/dienā</p>
             <div class="poga">
                 <button>Vairāk info</button>
             </div>
         </div>
         <div class="sludinajums">
         <img src="images/dzivoklis.jpg" alt="">
-            <p>Pilsēta: Liepāja</p>
-            <p>Rajons: Centrs</p>
-            <p>Cena: 50$/dienā</p>
+            <p><b>Pilsēta:</b> Liepāja</p>
+            <p><b>Iela:</b> Stacijas</p>
+            <p><b>Cena:</b> 50$/dienā</p>
             <div class="poga">
                 <button>Vairāk info</button>
             </div>
         </div>
         <div class="sludinajums">
         <img src="images/dzivoklis.jpg" alt="">
-        <p>Pilsēta: Liepāja</p>
-            <p>Rajons: Centrs</p>
-            <p>Cena: 50$/dienā</p>
+        <p><b>Pilsēta:</b> Liepāja</p>
+            <p><b>Iela:</b> Stacijas</p>
+            <p><b>Cena:</b> 50$/dienā</p>
             <div class="poga">
                 <button>Vairāk info</button>
             </div>
