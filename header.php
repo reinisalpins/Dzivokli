@@ -20,7 +20,7 @@
         <li><a href="index.php" class=" <?php echo($page == "sakums" ? "active" : ""); ?>">Sākumlapa</a></li>
         <li><a href="sludinajumi.php" class=" <?php echo($page == "sludinajumi" ? "active" : ""); ?>">Sludinājumi</a></li>    
         <li><a href="pievienot.php" class=" <?php echo($page == "pievienot" ? "active" : ""); ?>">Pievienot Sludinājumu</a></li> 
-        <li><a href="login.php" class=" <?php echo($page == "profils" ? "active" : ""); ?>">Profils</a></li>
+        <li><a href="profils.php" class=" <?php echo($page == "profils" ? "active" : ""); ?>">Profils</a></li>
       </ul>
     </nav>
 

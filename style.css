@@ -162,7 +162,7 @@ nav ul li:hover{
 
 .info{
   margin-top: 60px;
-  padding: 20px 10%;
+  padding: 20px 13%;
   position: relative;
 }
 
@@ -209,7 +209,7 @@ nav ul li:hover{
   margin-top: 30px;
   font-weight: 300;
   line-height: 1.2;
-  font-size: 50px;
+  font-size: 40px;
   margin-bottom: 0px;
   letter-spacing: 2px;
 }
@@ -218,7 +218,7 @@ nav ul li:hover{
   margin-top: 20px;
   font-weight: 300;
   line-height: 1.2;
-  font-size: 30px;
+  font-size: 25px;
   letter-spacing: 2px;
   margin-bottom: 0px;
 }
@@ -227,7 +227,7 @@ nav ul li:hover{
   margin-top: 20px;
   font-weight: 300;
   line-height: 1.2;
-  font-size: 25px;
+  font-size: 23px;
   letter-spacing: 2px;
   margin-bottom: 45px;
 }
@@ -244,7 +244,7 @@ nav ul li:hover{
   margin-top: 30px;
   font-weight: 300;
   line-height: 1.2;
-  font-size: 50px;
+  font-size: 40px;
   margin-bottom: 0px;
   letter-spacing: 2px;
   margin-left: 30px;
@@ -255,7 +255,7 @@ nav ul li:hover{
   margin-top: 20px;
   font-weight: 300;
   line-height: 1.2;
-  font-size: 30px;
+  font-size: 25px;
   letter-spacing: 2px;
   margin-bottom: 0px;
   margin-left: 30px;
@@ -265,7 +265,7 @@ nav ul li:hover{
   margin-top: 20px;
   font-weight: 300;
   line-height: 1.2;
-  font-size: 25px;
+  font-size: 23px;
   letter-spacing: 2px;
   margin-bottom: 45px;
   margin-left: 30px;
@@ -298,14 +298,14 @@ nav ul li:hover{
 
 .jaunakie{
   margin-top: 80px;
-  padding: 20px 10%;
+  padding: 20px 13%;
   position: relative;
    margin-bottom: 100px; 
 }
 
 .jaunakie h1{
   color: #fff;
-  font-size: 50px;
+  font-size: 40px;
   font-weight: 300;
   line-height: 1.2;
   margin-bottom: 0px;
@@ -315,7 +315,7 @@ nav ul li:hover{
 
 .jaunakie .box-container  {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-template-columns: 23.5% 23.5% 23.5% 23.5%;
   gap: 20px;
   margin-top: 50px;
   position: relative;
@@ -326,14 +326,9 @@ nav ul li:hover{
   box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.21);
   background: var(--main-color);
   border-radius: 15px;
-  transition: all 200ms ease-in;
+  height: 30rem;
 }
 
-
-.jaunakie .box-container .jaunakais:hover{
-  transform: scale(1.03);
-  transition: all 200ms ease-in;
-}
 
 
 
@@ -347,7 +342,7 @@ nav ul li:hover{
 }
 
 .jaunakie .box-container .jaunakais p{
-  font-size: 20px;
+  font-size: 18px;
 margin-left: 7px;
 padding: 7px;
 color: #fff;
@@ -356,9 +351,9 @@ margin-bottom: 5px;
   
 }
 .jaunakie .box-container .jaunakais .poga {
-  margin-bottom: 30px;
-  padding-top: 12px;
-  text-align: center;
+  margin-bottom: 45px;
+margin-top: 10px;
+text-align: center;
 }
 
 .jaunakie .box-container .jaunakais .poga button{
@@ -478,6 +473,8 @@ margin-bottom: 5px;
   height: 80px;
   border-bottom: 1px solid rgb(170, 170, 170);
   text-align: center;
+  word-break: break-word;
+  width: 0px;
 }
 
 .profils .main-info .box-container .informacija table td form {
@@ -496,7 +493,7 @@ cursor: pointer;
   border: none;
 }
 .profils .main-info .box-container .informacija table td i:hover{
-  font-size: 25px;
+  color: var(--buttons);
 }
 
 
@@ -521,7 +518,9 @@ cursor: pointer;
 position: relative;
 margin-bottom: 20px;
 }
-
+.redigetProfilu{
+  color: #fff;
+}
 
 .profils .main-info.redigetProfilu label{
   
@@ -550,12 +549,34 @@ margin-bottom: 20px;
   height: 40px;
   box-sizing: border-box;
   background-color: #e8eeef;
-  color: #8a97a0;
   box-shadow: 0 1px 0 rgba(0, 0, 0, 0.03) inset;
   resize: none;
   margin-bottom: 15px;
   display: block; 
 }
+
+
+.profils .main-info textarea {
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  border-radius: 4px;
+  font-size: 15px;
+  outline: 0;
+  padding: 10px;
+  width: 100%;
+  height: 100px;
+  box-sizing: border-box;
+  background-color: #e8eeef;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.03) inset;
+  resize: none;
+  margin-bottom: 10px;
+  
+}
+.profils .main-info textarea:focus {
+  background: #d2d9dd
+}
+
+
 .profils .main-info input:focus {
   background: #d2d9dd
 }
@@ -608,11 +629,11 @@ margin-bottom: 20px;
   font-size: 20px;
   font-weight: 300;
 }
-.profils .main-info .dzestProfilu form{
-  padding-left: 30px;
+.profils .main-info .dzestProfilu input{
+  margin-left: 30px;
   padding-top: 20px;
   padding-bottom: 20px;
-  font-size: 20px;
+  font-size: 15px;
 }
 
 
@@ -628,7 +649,9 @@ margin-bottom: 20px;
   padding: 10px;
   padding-left: 20px;
   padding-right: 20px;
+  margin-bottom: 20px;
   color: #fff;
+  margin-left: 30px;
   border: none;
 }
 .profils .main-info .dzestProfilu button:hover{
@@ -747,7 +770,7 @@ b{
 
 .sludinajumi .box-container{
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: 23.5% 23.5% 23.5% 23.5%;
   gap: 30px;
   margin-top: 50px;
   position: relative;
@@ -758,7 +781,9 @@ b{
   box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.21);
   background: var(--main-color);
   border-radius: 15px;
+  height: 30rem;
   transition: all 200ms ease-in;
+  display: inline;
 }
 
 .sludinajumi .box-container .sludinajums img {
@@ -779,8 +804,8 @@ b{
   margin-bottom: 5px;
 }
 .sludinajumi .box-container .sludinajums .poga {
-  margin-bottom: 55px;
-  padding-top: 9px;
+  margin-bottom: 45px;
+  margin-top: 10px;
   text-align: center;
 }
 
@@ -796,15 +821,258 @@ b{
   border: none;
   color: #fff;
 }
+.sludinajumi .box-container .sludinajums .poga button a{
+  text-decoration: none;
+  color: #fff;
+}
 .sludinajumi .box-container .sludinajums .poga button:hover{
   background: var(--butons-hover);
 }
 
+.krasa{
+  width: 70%;
+  background-color: #406095;
+  padding: 10px;
+  color: #fff !important;
+  border-radius: 5px;
+}
 
+
+/* pievienot sludinajumu mazs info sakums*/
+.var5{
+  text-shadow: 0 0 2.5px #000;
+  color: #fff;
+}
+.var6{
+  color: var(--buttons);
+  font-size: 25px;
+}
+/* beigas  */
+
+.sludinajums1{
+  margin-top: 150px;
+  padding: 20px 13%;
+  position: relative;
+   margin-bottom: 100px;
+  
+}
+.sludinajums1 .bildes .myImg{
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+  width: 22%;
+  height: 200px;
+  margin-right: 10px;
+}
+
+.sludinajums1 .bildes .myImg:hover{
+  opacity: 0.7;
+}
+.sludinajums1 .bildes .modal{
+  display: none; 
+  position: fixed; 
+  z-index: 1; 
+  padding-top: 200px; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgb(0,0,0); 
+  background-color: rgba(0,0,0,0.9); 
+}
+.sludinajums1 .bildes .modal-content{
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 850px;
+  max-height: 600px;
+}
+
+.sludinajums1 .bildes .close{
+  position: absolute;
+  top: 150px;
+  right: 70px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.sludinajums1 .bildes .close:hover,
+.sludinajums1 .bildes .close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.sludinajums1 .informacija{
+  display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    position: relative;
+}
+
+.sludinajums1 .informacija h1{
+  margin-top: 50px;
+  font-size: 30px;
+  color: #fff;
+  text-shadow: 0 0 2.5px #000;
+}
+.sludinajums1 .informacija p{
+  margin-top: 30px;
+  font-size: 20px;
+  text-shadow: 0 0 2.5px #000;
+ color: #fff;
+ width: 80%;
+ line-height: 100%;
+}
+
+.sludinajums1 .informacija hr{
+  margin-top: 30px;
+width: 20%;
+color: #fff;
+}
+
+ .rezervet{
+  border-left: 1px solid white;
+  height: 95%;
+  margin-top: 40px;
+}
+.rezervet p{
+  margin-top: 50px;
+  margin-left: 50px;
+  margin-bottom: 20px;
+  font-size: 30px;
+  color: #fff;
+  text-shadow: 0 0 2.5px #000;
+}
+
+.rezervet span{
+  text-decoration: underline;
+}
+
+
+ .rezervet h1{
+  margin-top: 50px;
+  margin-left: 50px;
+  margin-bottom: 50px;
+  font-size: 30px;
+  color: #fff;
+  text-shadow: 0 0 2.5px #000;
+}
+ .rezervet h2{
+  margin-top: 50px;
+  margin-left: 50px;
+  margin-bottom: 30px;
+  font-size: 25px;
+  font-weight: normal;
+  color: #fff;
+  text-shadow: 0 0 2.5px #000;
+  line-height: 120%;
+}
+
+
+ .rezervet textarea{
+  background: rgba(255, 255, 255, 0.1);
+border: none;
+border-radius: 4px;
+font-size: 15px;
+margin-left: 50px;
+outline: 0;
+padding: 10px;
+width: 80%;
+height: 150px;
+box-sizing: border-box;
+background-color: #e8eeef;
+box-shadow: 0 1px 0 rgba(0, 0, 0, 0.03) inset;
+resize: none;
+margin-bottom: 15px;
+display: block;
+}
+ .rezervet select{
+  background: rgba(255, 255, 255, 0.1);
+border: none;
+border-radius: 4px;
+font-size: 15px;
+margin-left: 50px;
+outline: 0;
+padding: 10px;
+width: 50px;
+height: 40px;
+box-sizing: border-box;
+background-color: #e8eeef;
+box-shadow: 0 1px 0 rgba(0, 0, 0, 0.03) inset;
+resize: none;
+margin-bottom: 15px;
+display: block;
+}
+
+ .rezervet label{
+  margin-top: 30px;
+font-size: 23px;
+margin-left: 50px;
+margin-bottom: 30px;
+color: #fff;
+text-shadow: 0 0 2.5px #000;
+display: block;
+}
+ .rezervet .poga{
+
+background: var(--buttons);
+font-size: 17px;
+text-transform: uppercase;
+cursor: pointer;
+position: relative;
+border-radius: 10px;
+letter-spacing: 2px;
+margin-top: 20px;
+margin-left: 50px;
+padding: 10px;
+color: #fff;
+border: none;
+}
+ .rezervet .poga:hover{
+  background-color: var(--butons-hover);
+}
 
 .pagination {
   display: inline-block;
 }
+
+.atsauksmes{
+  margin-top: 100px;
+  
+  
+}
+.atsauksmes h1{
+font-size: 30px;
+color: #fff;
+text-shadow: 0 0 2.5px #000;
+margin-bottom: 50px;
+}
+.atsauksmes h2{
+  font-size: 25px;
+  color: #fff;
+  text-shadow: 0 0 2.5px #000;
+  margin-bottom: 15px;
+  }
+  .atsauksmes p{
+    font-size: 20px;
+  color: #fff;
+  text-shadow: 0 0 2.5px #000;
+  margin-bottom: 30px;
+  line-height: 120%;
+
+    }
+
+  .atsauksmes .atsauksmeBox{
+    width: 70%;
+    background-color: var(--main-color);
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    word-wrap: break-word;
+  }
 
 .pagination a {
   color: var(--text-color);
@@ -827,13 +1095,12 @@ b{
 
 /* Layout and style */
 
-.container {
+.containeris {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 50px;
 }
-
-
 
 
 /* pievienot sludinajumu page */
@@ -858,7 +1125,7 @@ margin-bottom: 20px;
 
 .pievienot label{
   margin-top: 30px;
-  font-size: 30px;
+  font-size: 25px;
   margin-bottom: 30px;
   color: #fff;
   text-shadow: 0 0 2.5px #000;
@@ -877,7 +1144,6 @@ margin-bottom: 20px;
   height: 120px;
   box-sizing: border-box;
   background-color: #e8eeef;
-  color: #8a97a0;
   box-shadow: 0 1px 0 rgba(0, 0, 0, 0.03) inset;
   resize: none;
   margin-bottom: 10px;
@@ -898,8 +1164,6 @@ margin-bottom: 20px;
   height: 40px;
   box-sizing: border-box;
   background-color: #e8eeef;
-  color: #8a97a0;
-  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.03) inset;
   resize: none;
   margin-bottom: 15px;
   display: block; 
@@ -908,7 +1172,7 @@ margin-bottom: 20px;
   background: #d2d9dd
 }
 
-.pievienot .container{
+ .container{
     display: block;
     position: relative;
     padding-left: 35px;
@@ -920,12 +1184,12 @@ margin-bottom: 20px;
 
 }
 
-.pievienot .container input {
+ .container input {
   position: absolute;
   opacity: 0;
   cursor: pointer;
 }
-.pievienot .checkmark {
+.checkmark {
   position: absolute;
   top: 0;
   left: 0;
@@ -936,29 +1200,29 @@ margin-bottom: 20px;
 }
 
 
-.pievienot .container:hover input ~ .checkmark {
+ .container:hover input ~ .checkmark {
   background-color: #ccc;
 }
 
 /* When the radio button is checked, add a blue background */
-.pievienot .container input:checked ~ .checkmark {
+ .container input:checked ~ .checkmark {
   background-color: var(--buttons);
 }
 
 /* Create the indicator (the dot/circle - hidden when not checked) */
-.pievienot .checkmark:after {
+ .checkmark:after {
   content: "";
   position: absolute;
   display: none;
 }
 
 /* Show the indicator (dot/circle) when checked */
-.pievienot .container input:checked ~ .checkmark:after {
+ .container input:checked ~ .checkmark:after {
   display: block;
 }
 
 /* Style the indicator (dot/circle) */
-.pievienot .container .checkmark:after {
+ .container .checkmark:after {
  	top: 9px;
 	left: 9px;
 	width: 8px;
@@ -1117,12 +1381,36 @@ margin-bottom: 20px;
 .login-link {
   text-decoration: none;
   color: #fff;
+  margin-bottom: 30px;
 }
 .login-link:hover {
   text-decoration: underline;
 }
 
+.kluda{
+  font-size: 20px;
+  position: absolute;
+  bottom: 0;
+  padding: 10px;
+  left: 30%;
+  right: 30%;
+  text-shadow: 0 0 2.5px #000;
+}
 
+.alert{
+  font-size: 30px;
+  text-align: left;
+  padding: 20px;
+  color: #fff;
+  border-radius: 5px;
+  text-shadow: 0 0 2.5px #000;
+}
+.sarkans{
+  background-color: #E6203B;
+}
+.zals{
+  background-color: #27dd03;
+}
 
 
 
@@ -1138,6 +1426,7 @@ margin-bottom: 20px;
 .formContainer .register-container{
   margin: auto;
   text-align: left;
+  margin-top: 20px;
 }
 
 .formContainer .register-container h1{
@@ -1167,8 +1456,7 @@ margin-bottom: 20px;
   border-radius: 5px;
   font-size: 15px;
   padding: 8px 15px;
-  width: 20%;
-  margin-top: 40px;
+  width: 21%;
   color: #fff;
   cursor: pointer;
   background-color: #E6203B;

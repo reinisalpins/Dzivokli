@@ -1,52 +1,41 @@
 <?php
 $page = "profils";
 require "header.php";
+$page2 = "galvena";
+require "profilaNavbar.php";
 ?>
 
+    
+    <?php 
+                require("connect_db.php");
+                $lietotajs = $_SESSION['user'];
+                $profilaVaicajums = "SELECT * FROM lietotajs WHERE lietotajs_id = '$lietotajs'";
+                $atlasaProfilu = mysqli_query($savienojums, $profilaVaicajums) or die("Nekorekts Vaicajums!");
 
-<section class="profils">
-   <div class="side-info">
-        <ul>
-            <li>
-                <a class="active" href="">Mans profils</a>
-            </li>
-            <li>
-                <a href="maniSludinajumi.php">Mani sludinājumi</a>
-            </li>
-            <li>
-                <a href="manasRezervacijas.php">Manas rezervācijas</a>
-            </li>
-            <li>
-                <a href="redigetProfilu.php">Rediģēt profilu</a>
-            </li>
-            <li>
-                <a href="dzestProfilu.php">Dzēst profilu</a>
-            </li>
-        </ul>
-    </div> 
-
-    <div class="main-info">
-        <div class="box-container">
-            <div class="informacija">
+                while($row = mysqli_fetch_assoc($atlasaProfilu)){
+                    echo"
+    <div class='main-info'>
+        <div class='box-container'>
+            <div class='informacija'>
                     <ul>
-                        <li>Vārds: Reinis</li>
+                        <li>Vārds: {$row['vards']}</li>
                         <hr>
-                        <li>Uzvārds: Alpiņš</li>
+                        <li>Uzvārds: {$row['uzvards']}</li>
                         <hr>
-                        <li>Tālrunis: 29601231</li>
+                        <li>Tālrunis: {$row['talrunis']}</li>
                         <hr>
-                        <li>Dzimšanas datums: 26.09.2002</li>
+                        <li>Dzimšanas datums: {$row['dzim_dat']}</li>
                         <hr>
-                        <li>E-pasts: Reinisalpins@gmail.com</li>
+                        <li>E-pasts: {$row['epasts']}</li>
 </ul>
             </div>
-            <div class="informacija">
+            <div class='informacija'>
                     <ul>
-                        <li>Valsts: Latvija</li>
+                        <li>Valsts: {$row['valsts']}</li>
                         <hr>
-                        <li>Pilsēta: Liepāja</li>
+                        <li>Pilsēta: {$row['pilseta']}</li>
                         <hr>
-                        <li>Adrese: Lielā iela 16</li>
+                        <li>Adrese: {$row['iela']} {$row['ielas_nr']} {$row['dzivokla_nr']}</li>
                         <hr>
                     </ul>
             </div>
@@ -54,3 +43,7 @@ require "header.php";
     
     </div>
 </section>
+                ";
+                }
+            ?>
+

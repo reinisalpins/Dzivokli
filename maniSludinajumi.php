@@ -1,81 +1,68 @@
 <?php
 $page = "profils";
 require "header.php";
+$page2 = "sludinajumi";
+require "profilaNavbar.php";
 ?>
 
-<section class="profils">
-   <div class="side-info">
-        <ul>
-            <li>
-                <a href="profils.php">Mans profils</a>
-            </li>
-            <li>
-                <a class="active" href="">Mani sludinājumi</a>
-            </li>
-            <li>
-                <a href="manasRezervacijas.php">Manas rezervācijas</a>
-            </li>
-            <li>
-                <a href="redigetProfilu.php">Rediģēt profilu</a>
-            </li>
-            <li>
-                <a href="">Dzēst profilu</a>
-            </li>
-        </ul>
-    </div> 
-    <div class="main-info">
-        <div class="box-container">
-            <div class="informacija">
+
+
+<div class='main-info'>
+        <div class='box-container'>
+            <div class='informacija'>
                     <table>
                         <tr>
-                            <th>
-                                Apraksts
-                            </th>
-                            <th>
-                                Atrašanās vieta
-                            </th>
-                            <th>
-                                Mājdzīvnieki
-                            </th>
-                            <th>
-                                Cena
-                            </th>
-                            <th>
-                                Rediģēt
-                            </th>
-                            <th>
-                                Dzēst
-                            </th>
-                        </tr>
-                        <tr>
+                            <th>Apraksts</th>
+                            <th>Atrašanās vieta</th>
+                            <th>Mājdzīvnieki</th>
+                            <th>Cena</th>   
+                            <th>Rediģēt</th>
+                            <th>Dzēst</th>
+                        
+
+    <?php
+            require("connect_db.php");
+            $lietotajs = $_SESSION['user'];
+            $sludinajumaVacicajums = "SELECT * FROM sludinajums WHERE lietotajs_id = '$lietotajs'";
+            $atlasaSludinajumus = mysqli_query($savienojums, $sludinajumaVacicajums) or die("Nekorekts Vaicajums!");
+
+            while($row = mysqli_fetch_assoc($atlasaSludinajumus)){
+
+                echo "
+
+                            <tr>
+                            <td>{$row['apraksts']}</td>
+                            <td>{$row['valsts']}, {$row['pilseta']} {$row['iela']} {$row['ielas_nr']} {$row['dzivokla_nr']}</td>
+                            <td>{$row['majdzivnieki']}</td>
+                            <td> {$row['cena']} € dienā</td>
                             <td>
-                                Lorem ipsum dolor sit amet consectetur............
+                            <form action='redigetSludinajumu.php' method='POST'>
+                            <button type='submit' name='apskatit' value='{$row['sludinajums_id']}'>
+                            <i class='fas fa-edit'></i>
+                            </button>
+                            </form>
                             </td>
                             <td>
-                                Liepāja, Lielā iela 15A
+                            <form action='dzestSludinajumu.php' method='POST'>
+                            <button type='submit' name='delete' value='{$row['sludinajums_id']}'>
+                            <i class='fas fa-trash'></i>
+                            </button>
+                            </form>
                             </td>
-                            <td>
-                                Atļauti
+                            </tr>
                             </td>
-                            <td>
-                                30$ dienā
-                            </td>
-                            <td>
-                                <form action="redigetSludinajumu.php" method="POST">
-                                <button type="submit" name="edit">
-                                    <i class="fas fa-edit"></i>
-                                    </button>
-                                </form>
-                            </td>
-                            <td>
-                            <form action="dzestSludinajumu.php" method="POST">
-                                    <button type="submit" name="delete">
-                                        <i class="fas fa-trash"></i>
-                                    </button>
-                                </form>
-                            </td>
-                        </tr>
-                    </table>
+                            </tr>
+                            </tr>
+                            
+                       
+                    
+                
+                
+                ";
+            }     
+    
+    ?>
+    </table>
             </div>
         </div>
     

@@ -1,64 +1,111 @@
 <?php
 $page = "profils";
 require "header.php";
+$page2 = "rediget";
+require "profilaNavbar.php";
 ?>
 
 
-<section class="profils">
-   <div class="side-info">
-        <ul>
-            <li>
-                <a  href="profils.php">Mans profils</a>
-            </li>
-            <li>
-                <a href="maniSludinajumi.php">Mani sludinājumi</a>
-            </li>
-            <li>
-                <a href="manasRezervacijas.php">Manas rezervācijas</a>
-            </li>
-            <li>
-                <a class="active" href="">Rediģēt profilu</a>
-            </li>
-            <li>
-                <a href="dzestProfilu.php">Dzēst profilu</a>
-            </li>
-        </ul>
-    </div> 
+    <div class='main-info'>
+        <div class='box-container'>
+           
 
-    <div class="main-info">
-        <div class="box-container">
-        <div class="redigetProfilu">
-    <form action="POST">
-    <h2>Vārds</h2>
-    <input type="text" value="Reinis">
-    <h2>Uzvārds</h2>
-    <input type="text" value="Alpiņš">
-    <h2>E-Pasts</h2>
-    <input type="email" value="reinisalpins@gmail.com">
-    <h2>Parole</h2>
-    <input type="password" value="Parole01">
+    <?php
+            require("connect_db.php");
+            $lietotajs = $_SESSION['user'];
+            if(isset($_POST['rediget'])){
 
-    <h2>Tālrunis</h2>
+                $vards= $_POST['vards'];
+                $uzvards= $_POST['uzvards'];
+                $talrunis= $_POST['talrunis'];
+                $valsts= $_POST['valsts'];
+                $pilseta= $_POST['pilseta'];
+                $iela= $_POST['iela'];
+                $ielasNr= $_POST['ielasNr'];
+                $dzivNR= $_POST['dzivNR'];
 
-    <input type="text" value="29412312">
-</div>
-    <div class="redigetProfilu">
-    
-    <h2>Pilsēta</h2>
-    <input type="text" value="Liepāja">
-    
-    <h2>Iela</h2>
-    <input type="text" value="Lielā iela">
-    <h2>Ielas nr</h2>
-    <input type="text" value="534B">
-    <h2>Dzīvokļa nr. (ja tāds ir)</h2>
-    <input type="text" value="15">
+                $lietotajsVaicajums = "SELECT * FROM lietotajs where lietotajs_id = '$lietotajs'";
+                $query = $savienojums->query($lietotajsVaicajums);
+                $row = $query->fetch_assoc();
 
-</form>
+                
 
-    <button class="poga">
-        Saglabāt
-    </button>
-        </div>
-    </div>
-</div>
+
+                $redigetProfiluVaicajums= "UPDATE lietotajs SET vards = '$vards', uzvards = '$uzvards',
+                talrunis = '$talrunis',valsts = '$valsts',pilseta = '$pilseta', iela = '$iela', ielas_nr = '$ielasNr', dzivokla_nr = '$dzivNR' WHERE lietotajs_id = '$lietotajs'"; 
+                
+                $old_name = "lietotaji/".$row['vards'].$row['uzvards']; 
+                
+                // New Name For The File
+                $new_name = "lietotaji/".$vards.$uzvards; 
+                
+
+                if(rename( $old_name, $new_name))
+                    { 
+                    if(mysqli_query($savienojums, $redigetProfiluVaicajums)){
+
+                    echo "<div class='alert zals'>profils veiksmigi rediģēts! </div>";
+                    header("Refresh:1; url=profils.php");
+                 }else{
+                     echo "<div class='alert sarkans'> Kluda!</div>";
+                }
+
+                    }
+                    else
+                    {
+                        echo "<div class='alert sarkans'> Kluda!</div>";
+                    }
+
+               
+
+            }else{
+                $redigetVaicajums = "SELECT * FROM lietotajs WHERE lietotajs_id = '$lietotajs'";
+
+                $atlasaLietotaju = mysqli_query($savienojums, $redigetVaicajums) or die("Nekorekts vaicajums!");
+
+                while($row = mysqli_fetch_assoc($atlasaLietotaju)){
+                    echo " <div class='redigetProfilu'>
+                                <form action='' method='POST'>
+                                <h2>Vārds</h2>
+                                <input type='text' name='vards' value='{$row['vards']}' required>
+                                <h2>Uzvārds</h2>
+                                <input type='text' name='uzvards' value='{$row['uzvards']}' required>
+
+                                <h2>Tālrunis</h2>
+
+                                <input type='text' name='talrunis' value='{$row['talrunis']}' required>
+
+                                <h2>Valsts</h2>
+                                <input type='text' name='valsts' value='{$row['valsts']}' required>
+                                
+                                <h2>Pilsēta</h2>
+                                <input type='text' name='pilseta' value='{$row['pilseta']}' required>
+                            </div>
+                                <div class='redigetProfilu'>
+
+                                
+                                
+                               
+                                
+                                <h2>Iela</h2>
+                                <input type='text' name='iela' value='{$row['iela']}' required>
+                                <h2>Ielas nr</h2>
+                                <input type='text' name='ielasNr' value='{$row['ielas_nr']}' required>
+                                <h2>Dzīvokļa nr. (ja tāds ir)</h2>
+                                <input type='text' name='dzivNR' value='{$row['dzivokla_nr']}'>
+
+
+                                <input type='submit' class='poga' name='rediget' value='Saglabat'/>
+                            </form>
+
+                           
+                                    </div>
+                                </div>
+                            </div>
+                    
+                    ";
+                }
+            }
+    ?>
+
+   

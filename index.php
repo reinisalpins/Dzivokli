@@ -43,54 +43,37 @@ $page = "sakums";
 
     </div>
 </section>
-
-
-
     <section class="jaunakie">
         <h1>Jaunākie portāla sludinājumi</h1>
         <div class="box-container">
-            <div class="jaunakais">
-                <img src="images/dzivoklis.jpg" alt="">
-                <p><b>Pilsēta:</b> Liepāja</p>
-            <p><b>Iela:</b> Stacijas</p>
-            <p><b>Cena:</b> 50$/dienā</p>
 
-                <div class="poga">
-                    <button>Vairāk</button>
+
+        <?php
+                require("connect_db.php");
+                $sludVaic = "SELECT * FROM sludinajumi ORDER BY sludinajums_id DESC LIMIT 4";
+                $atlasaSlud = mysqli_query($savienojums, $sludVaic) or die("Nekorekts vaicajums");
+
+                if(mysqli_num_rows($atlasaSlud) > 0){
+                    while($row = mysqli_fetch_assoc($atlasaSlud)){
+                        echo "
+                        <div class='jaunakais'>
+
+                        <img src='lietotaji/{$row['vards']}{$row['uzvards']}/sludinajums{$row['iela']}{$row['ielas_nr']}{$row['dzivokla_nr']}/{$row['prieksskatijuma_attels']}'>
+                <p><b>Pilsēta:</b> {$row['pilseta']}</p>
+                <p><b>Iela:</b> {$row['iela']}</p>
+                <p><b>Cena:</b> {$row['cena']}$/Dienā</p>
+                <form action ='sludinajums.php' method='post'>
+                <div class='poga'>
+                    <button type='submit' class='poga' name='apskatit' value='{$row['sludinajums_id']}'>Apskatīt</button>
                 </div>
-
+                       
+                </form>
             </div>
-            <div class="jaunakais">
-            <img src="images/dzivoklis2.jpg" alt="">
-                <p><b>Pilsēta:</b> Liepāja</p>
-            <p><b>Iela:</b> Stacijas</p>
-            <p><b>Cena:</b> 50$/dienā</p>
-
-                <div class="poga">
-                    <button>Vairāk</button>
-                </div>
-            </div>
-            <div class="jaunakais">
-            <img src="images/dzivoklis3.jpg" alt="">
-                <p><b>Pilsēta:</b> Liepāja</p>
-            <p><b>Iela:</b> Stacijas</p>
-            <p><b>Cena:</b> 50$/dienā</p>
-
-                <div class="poga">
-                    <button>Vairāk</button>
-                </div>
-            </div>
-            <div class="jaunakais">
-            <img src="images/dzivoklis.jpg" alt="">
-                <p><b>Pilsēta:</b> Liepāja</p>
-            <p><b>Iela:</b> Stacijas</p>
-            <p><b>Cena:</b> 50$/dienā</p>
-
-                <div class="poga">
-                    <button>Vairāk</button>
-                </div>
-            </div>
-        </div>
+                        ";
+                    }
+                }
+            ?>
+        </div> 
     </section>
 
     
