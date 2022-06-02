@@ -1,8 +1,8 @@
 <?php
-    $serveravards = "localhost:3309";
-    $lietotajsvards = "root";
-    $parole = "";
-    $dbvards="majokli";
+    $serveravards = "eu-cdbr-west-02.cleardb.net";
+    $lietotajsvards = "	b2db0eb342de93";
+    $parole = "eac36859";
+    $dbvards="heroku_89e522370f3c816";
 
     $savienojums = mysqli_connect($serveravards, $lietotajsvards, $parole, $dbvards);
 
